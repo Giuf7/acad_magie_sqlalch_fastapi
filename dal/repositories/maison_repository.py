@@ -26,4 +26,4 @@ class MaisonRepository:
     
     def delete(self, db: Session, maison: Maison) -> None:
         db.delete(maison)
-        db.flush
+        db.flush()

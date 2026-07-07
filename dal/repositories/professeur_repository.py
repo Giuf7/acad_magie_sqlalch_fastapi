@@ -26,6 +26,6 @@ class ProfesseurRepository:
     
     def delete(self, db: Session, professeur: Professeur) -> None:
         db.delete(professeur)
-        db.flush
+        db.flush()
     
     
