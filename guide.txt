@@ -1,1 +1,0 @@
-dal/models => dal/repository => api/schemas => api/controllers => api/routes
