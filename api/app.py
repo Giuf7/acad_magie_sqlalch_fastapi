@@ -3,7 +3,13 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
 from dal.database import init_db, test_connexion
-from api.routes import route_cours, route_eleve, route_maison, route_professeur
+from api.routes import (
+    route_cours,
+    route_eleve,
+    route_maison,
+    route_professeur,
+    route_utilisateur,
+)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -23,6 +29,7 @@ app.include_router(route_cours.router)
 app.include_router(route_eleve.router)
 app.include_router(route_maison.router)
 app.include_router(route_professeur.router)
+app.include_router(route_utilisateur.router)
 
 @app.get("/", tags=["Racine"])
 def racine():
